@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASSIV</title>
+    <link rel="icon" href="comp.jpg">
+</head>
+<body>
+
+    <h1>MASSIV</h1>
+    <script>
+
+        //1//
+//REQEMLER MASSIVI
+// rəqəmdən ibarət massiv yaradın. 
+// for dövründən istifadə edərək bu massivdəki rəqəmlərin cəmini hesablayıb konsola çıxarın.//
+
+
+let reqemler=[2,4,6,8,10]
+let cem=0
+//let i=0
+for(let i=0;i<reqemler.length;i++) {
+    cem+=reqemler[i]
+}
+console.log("massivler cemi:", cem);
+
+
+        //2//
+//Meyvələr Siyahısı
+//içində 5 fərqli meyvə adı olan massiv yaradın. for dövrü ilə bütün meyvələri konsola çıxarın, lakin adı "A" hərfi ilə başlayan meyvə olsa, onu çıxarmayın
+
+let fruits = ["alma", "banan", "armud", "üzüm", "ananas"];
+
+for (let i = 0; i < fruits.length; i++) 
+    if (fruits[i][0] === "a") {
+        continue;
+    }
+
+    // console.log(fruits[i]);
+
+ 
+
+     //5//
+//  Tələbə Obyekti
+// Bir student obyekti yaradın (ad, soyad, yaş, bal). Əgər tələbənin balı 51-dən böyükdürsə "Keçdi", kiçikdirsə "Kəsildi" sözünü konsola yazdırın.
+
+let student = {
+    ad: "Agabey",
+    soyad: "Velyev",
+    yas: 23,
+    bal: 75
+};
+
+if (student.bal > 51) {
+    console.log("Keçdi");
+} else {
+    console.log("Kəsildi");
+
+}
+
+           //7//
+//             Qiymətli Məhsullar
+// Məhsullar massivi yaradın (ad və qiymət). Qiyməti 100-dən baha olan məhsulların adlarını çap edin.
+let products = [
+    { ad: "Telefon", qiymet: 150 },
+    { ad: "Qelem", qiymet: 5 },
+    { ad: "Noutbuk", qiymet: 1200 },
+    { ad: "Defter", qiymet: 20 }
+];
+
+for (let i = 0; i < products.length; i++) {
+    if (products[i].qiymet > 100) {
+        console.log(products[i].ad);
+    }
+}
+    
+
+             //9//
+//     Massivin Tərsinə Çevrilməsi
+// 5 elementli massiv yaradın və onun elementlərini sondan başlayaraq əvvələ doğru dövr vasitəsilə çap edin.
+         let say = [10, 20, 30, 40, 50];
+
+for (let i = say.length - 1; i >= 0; i--) {
+    console.log(say[i]);
+}
+
+      //12//
+    // İstifadəçilər massivi yaradın (username, password). Əgər massivdə istifadəçi adı "admin" və şifrəsi "12345" olan obyekt varsa, "Giriş uğurludur" yazın.
+
+    let users = [
+    { username: "user1", password: "11111" },
+    { username: "admin", password: "12345" },
+    { username: "test", password: "99999" }
+];
+
+let login = true;
+
+for (let i = 0; i < users.length; i++) {
+    if (users[i].username === "admin" && users[i].password === "12345") {
+        login = true;
+        break;
+    }
+}
+
+if (login) {
+    console.log("Giriş uğurludur");
+} else {
+    console.log("Giriş uğursuzdur");
+}
+
+         //14//
+//   Kitabxana Sistemi
+// Kitab obyektləri massivi yaradın (title, author, isRead). Yalnız oxunmuş (isRead: true) kitabların başlıqlarını çap edin
+
+let books = [
+    { title: "1984", author: "George Orwell", isRead: true },
+    { title: "Harry Potter", author: "J.K. Rowling", isRead: false },
+    { title: "Qurgu", author: "Elxan Elatli", isRead: true },
+    { title: "Sherlock Holmes", author: "Arthur Conan Doyle", isRead: false }
+];
+
+for (let i = 0; i < books.length; i++) {
+    if (books[i].isRead === true) {
+        console.log(books[i].title);
+    }
+}
+
+
+
+    </script>
+</body>
+</html>
